@@ -51,8 +51,16 @@ function getFizzBuzz(num) {
  *   5  => 120
  *   10 => 3628800
  */
-function getFactorial(/* n */) {
-  throw new Error('Not implemented');
+function getFactorial(n) {
+  // throw new Error('Not implemented');
+  if (n < 0) return -1;
+
+  // If the number is 0, its factorial is 1.
+  if (n === 0) return 1;
+
+  // Otherwise, call the recursive procedure again
+
+  return (n * getFactorial(n - 1));
 }
 
 
